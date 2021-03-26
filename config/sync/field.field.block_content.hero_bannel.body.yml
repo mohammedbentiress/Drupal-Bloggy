@@ -1,0 +1,23 @@
+uuid: ca656c54-d05b-430f-9330-20c4cfda1430
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_bannel
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.hero_bannel.body
+field_name: body
+entity_type: block_content
+bundle: hero_bannel
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

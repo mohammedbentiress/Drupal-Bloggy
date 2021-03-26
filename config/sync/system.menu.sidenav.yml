@@ -1,0 +1,8 @@
+uuid: e93b12e7-2cfb-4734-bff0-4bae80a69797
+langcode: en
+status: true
+dependencies: {  }
+id: sidenav
+label: Sidenav
+description: 'sidebar navigation'
+locked: false

@@ -1,0 +1,22 @@
+uuid: 28b13b67-bd36-4b92-b50d-777e2ccfb584
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - substable
+_core:
+  default_config_hash: GpUaz7FJXEtQb8SHa8h5OzSPj6RcNds8tOnO1-itpfQ
+id: substable_powered
+theme: substable
+region: footer
+weight: -5
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

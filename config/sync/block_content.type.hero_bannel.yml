@@ -1,0 +1,8 @@
+uuid: d7f289d4-657c-42f1-939d-53df92afdb47
+langcode: en
+status: true
+dependencies: {  }
+id: hero_bannel
+label: 'Hero bannel'
+revision: 0
+description: ''

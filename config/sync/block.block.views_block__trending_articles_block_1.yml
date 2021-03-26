@@ -1,0 +1,30 @@
+uuid: bea44a9b-cde5-4057-95a6-bdca6d4e1aab
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.trending_articles
+  module:
+    - system
+    - views
+  theme:
+    - substable
+id: views_block__trending_articles_block_1
+theme: substable
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:trending_articles-block_1'
+settings:
+  id: 'views_block:trending_articles-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

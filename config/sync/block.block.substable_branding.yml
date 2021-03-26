@@ -1,0 +1,25 @@
+uuid: 94ead131-b634-47d0-b805-8d526a9c1782
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - substable
+_core:
+  default_config_hash: I1mVPaNy2HynGDxN6quW2alTxwh2wpLrepeJZEQb5ww
+id: substable_branding
+theme: substable
+region: navigation
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

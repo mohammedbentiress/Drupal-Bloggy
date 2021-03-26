@@ -1,0 +1,25 @@
+uuid: d8c1726f-3da0-4ea8-b8e3-631276453a87
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.sidenav
+  module:
+    - system
+  theme:
+    - substable
+id: substable_sidenav
+theme: substable
+region: navigation
+weight: -7
+provider: null
+plugin: 'system_menu_block:sidenav'
+settings:
+  id: 'system_menu_block:sidenav'
+  label: Sidenav
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

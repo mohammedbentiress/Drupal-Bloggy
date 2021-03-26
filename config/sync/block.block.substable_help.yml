@@ -1,0 +1,22 @@
+uuid: b22bd928-bc1f-4971-8850-a3430150c5c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - substable
+_core:
+  default_config_hash: Un8sX1XhL9SINI_rE_YXDFHzdCDZr54OQHROhScyZXo
+id: substable_help
+theme: substable
+region: header
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

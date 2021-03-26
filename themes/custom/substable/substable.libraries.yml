@@ -1,0 +1,23 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      css/fonts/icomoon/style.css: {}
+      css/fonts/flaticon/font/flaticon.css: {}
+      css/tiny-slider.css: {}
+      css/glightbox.min.css: {}
+      css/aos.css: {}
+      css/style.css: {}
+
+global-scripts:
+  version: 1.x
+  js:
+    js/bootstrap.bundle.min.js: {}
+    js/tiny-slider.js: {}
+    js/glightbox.min.js: {}
+    js/aos.js: {}
+    js/navbar.js: {}
+    js/counter.js: {}
+    js/custom.js: {}
+  dependecies:
+    - core/jquery

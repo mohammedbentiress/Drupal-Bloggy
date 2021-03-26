@@ -1,0 +1,15 @@
+uuid: 99cf2518-e40d-4911-9e35-b32d85f8c15c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'List Category'
+vid: category
+description: 'Manage the list of categories'
+weight: 0

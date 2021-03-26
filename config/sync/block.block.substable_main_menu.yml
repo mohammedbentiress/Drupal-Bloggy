@@ -1,0 +1,27 @@
+uuid: b8237015-57ae-4d02-8000-6e228adc74c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - substable
+_core:
+  default_config_hash: pfeRZd47hJ6zovBqu3IbYntWmk7cKbyiEufY2IwwglA
+id: substable_main_menu
+theme: substable
+region: navigation
+weight: -7
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }

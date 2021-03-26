@@ -1,0 +1,10 @@
+uuid: d231f615-dabf-42c9-9bbd-41613aaf1278
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.product_display
+label: product_display
+targetEntityType: node
+cache: true

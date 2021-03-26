@@ -1,0 +1,23 @@
+uuid: e3f563b0-25d7-41a3-a2ab-599ff1ecb843
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_popular
+    - node.type.article
+id: node.article.field_popular
+field_name: field_popular
+entity_type: node
+bundle: article
+label: Popular
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

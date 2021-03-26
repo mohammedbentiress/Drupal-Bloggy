@@ -1,0 +1,21 @@
+uuid: 21373bf3-3725-49f2-b13f-8c158c19b86c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_first_name
+    - node.type.author
+  module:
+    - text
+id: node.author.field_first_name
+field_name: field_first_name
+entity_type: node
+bundle: author
+label: 'first name'
+description: 'author first name'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

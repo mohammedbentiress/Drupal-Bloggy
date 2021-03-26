@@ -1,0 +1,36 @@
+uuid: f90c4d48-66ca-4709-a0be-e0e8cecf4eea
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.author.body
+    - field.field.node.author.field_birth_date
+    - field.field.node.author.field_first_name
+    - field.field.node.author.field_lastname
+    - node.type.author
+  module:
+    - text
+    - user
+id: node.author.teaser
+targetEntityType: node
+bundle: author
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_birth_date: true
+  field_first_name: true
+  field_lastname: true

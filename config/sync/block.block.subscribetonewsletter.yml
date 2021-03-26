@@ -1,0 +1,25 @@
+uuid: 50999b0f-8654-4058-b992-63b57bc92bc1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:8a285a8b-8644-4e26-aa1f-0455c8831983'
+  module:
+    - block_content
+  theme:
+    - substable
+id: subscribetonewsletter
+theme: substable
+region: footer
+weight: -6
+provider: null
+plugin: 'block_content:8a285a8b-8644-4e26-aa1f-0455c8831983'
+settings:
+  id: 'block_content:8a285a8b-8644-4e26-aa1f-0455c8831983'
+  label: 'Subscribe to newsletter'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

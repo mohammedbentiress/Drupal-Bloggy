@@ -1,0 +1,47 @@
+<div class="section pt-5 pb-0">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-7 text-center">
+                <h2 class="heading">{{label["#markup"]}}</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="posts-slide-wrap">
+                    <div class="posts-slide" id="posts-slide">
+                    {% for item in content['#view'].result  %}
+                        <div class="item">
+                            <div class="post-entry d-lg-flex">
+                                <div class="me-lg-5 thumbnail mb-4 mb-lg-0">
+                                    <a href="{{ path('entity.node.canonical', {'node': item.nid}) }}">
+                                        <img src="{{file_url(item._entity.field_image.entity.uri.value)}}" alt="Image" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="content align-self-center">
+                                    <div class="post-meta mb-3">
+                                        <a href="{{ path('entity.taxonomy_term.canonical', {'taxonomy_term': item._entity.field_category.entity.id}) }}" class="category">{{item._entity.field_category.entity.name.value}}</a>
+                                        &mdash;
+                                        <span class="date">{{item._entity.field_createdat.value|date("F d, Y")}}</span>
+                                    </div>
+                                    <h2 class="heading"><a href="{{ path('entity.node.canonical', {'node': item.nid}) }}">{{item._entity.label}}</a></h2>
+                                    <p>{{item._entity.field_introduction.value|raw}}</p>
+                                    <a href="#" class="post-author d-flex align-items-center">
+                                        <div class="author-pic">
+                                            <img src="https://i.pravatar.cc/45" alt="Image">
+                                        </div>
+                                        <div class="text">
+                                            {{dump(item._entity)}}
+                                            <strong>{{item._entity.field_author.entity.field_first_name.value }}{{ item._entity.field_author.entity.field_lastname.value}}</strong>
+                                            <span>CEO and Founder</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

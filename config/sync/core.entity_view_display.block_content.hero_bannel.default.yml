@@ -1,0 +1,22 @@
+uuid: 7b4a0e13-5ad7-4901-bd57-a048dc9e86fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_bannel
+    - field.field.block_content.hero_bannel.body
+  module:
+    - text
+id: block_content.hero_bannel.default
+targetEntityType: block_content
+bundle: hero_bannel
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,27 @@
+uuid: 7ba6f3e0-f632-4aa4-be85-530cdd6c9f43
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - substable
+_core:
+  default_config_hash: _nAXC7GnTksGBQGHa4izzWtjiIB4BmokhG3r2X69Ew8
+id: substable_account_menu
+theme: substable
+region: header
+weight: -2
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }
