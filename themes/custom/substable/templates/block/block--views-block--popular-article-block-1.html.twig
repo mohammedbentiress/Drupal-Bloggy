@@ -16,24 +16,24 @@
                 <div class="item">
                     <div class="post-entry d-block small-post-entry-v">
                         <div class="thumbnail">
-                            <a href="single.html">
+                            <a href="{{ path('entity.node.canonical', {'node': item.nid}) }}">
                                 <img src="{{file_url(item._entity.field_image.entity.uri.value)}}" alt="Image" class="img-fluid">
                             </a>
                         </div>
                         <div class="content">
                             <div class="post-meta mb-1">
-                                <a href="#" class="category">{{item._entity.field_category.entity.name.value}}</a> &mdash;
+                                <a href="{{ path('entity.taxonomy_term.canonical', {'taxonomy_term': item._entity.field_category.entity.id}) }}" class="category">{{item._entity.field_category.entity.name.value}}</a> &mdash;
                                 <span class="date">{{item._entity.field_createdat.value|date("F d, Y")}}</span>
                             </div>
-                            <h2 class="heading mb-3"><a href="single.html">{{item._entity.label}}</a></h2>
+                            <h2 class="heading mb-3"><a href="{{ path('entity.node.canonical', {'node': item.nid}) }}">{{item._entity.label}}</a></h2>
                             <p>{{item._entity.field_introduction.value|raw}}</p>
                             <a href="#" class="post-author d-flex align-items-center">
                                 <div class="author-pic">
-                                    <img src="https://i.pravatar.cc/45" alt="Image">
+                                    <img src="{{ file_url(item._entity.owner.user_picture.entity.uri.value) }}" alt="Image">
                                 </div>
                                 <div class="text">
-                                    <strong>Sergy Campbell</strong>
-                                    <span>CEO and Founder</span>
+                                    <strong>{{item._entity.owner.field_firstname.0.value ~' '~ item._entity.owner.field_lastname.0.value}}</strong>
+                                    <span>{{ item._entity.owner.field_description.0.value }}</span>
                                 </div>
                             </a>
                         </div>

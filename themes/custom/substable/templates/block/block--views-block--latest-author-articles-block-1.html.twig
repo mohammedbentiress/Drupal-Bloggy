@@ -1,0 +1,37 @@
+<div class="section pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="heading">{{label["#markup"]}}</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            {% for item in content['#view'].result  %}
+            <div class="col-lg-12">
+                <div class="post-entry d-md-flex small-horizontal mb-5">
+                    <div class="me-md-5 thumbnail mb-3 mb-md-0">
+                        <img src="{{file_url(item._entity.field_image.entity.uri.value)}}" alt="Image" class="img-fluid">
+                    </div>
+                    <div class="content">
+                        <div class="post-meta mb-3">
+                            <a href="{{ path('entity.taxonomy_term.canonical', {'taxonomy_term': item._entity.field_category.entity.id}) }}" class="category">{{item._entity.field_category.entity.name.value}}</a> &mdash;
+                            <span class="date">{{item._entity.field_createdat.value|date("F d, Y")}}</span>
+                        </div>
+                        <h2 class="heading"><a href="{{ path('entity.node.canonical', {'node': item.nid}) }}">{{item._entity.label}}</a></h2>
+                        <p>{{item._entity.field_introduction.value|raw}}</p>
+                        <a href="#" class="post-author d-flex align-items-center">
+                            <div class="author-pic">
+                                <img src="{{ file_url(item._entity.owner.user_picture.entity.uri.value) }}" alt="Image">
+                            </div>
+                            <div class="text">
+                                <strong>{{item._entity.owner.field_firstname.0.value ~' '~ item._entity.owner.field_lastname.0.value}}</strong>
+                                <span>{{ item._entity.owner.field_description.0.value }}</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

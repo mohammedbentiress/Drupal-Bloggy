@@ -17,6 +17,10 @@
  * @ingroup templates
  */
 #}
+{# {{ dump(drupal_view_result('categories', 'block_1') )}}
+{{ dump(items )}} #}
+
+
 {% import '@substable/menu/menu.html.twig' as categoryMacro %}
 <div class="site-mobile-menu site-navbar-target">
     <div class="site-mobile-menu-header">
@@ -31,7 +35,7 @@
         <div class="site-navigation">
             <div class="row">
                 <div class="col-md-6 text-center order-1 order-md-2 mb-3 mb-md-0">
-                    <a href="index-2.html" class="logo m-0 text-uppercase">MagDesign</a>
+                    <a href="{{path('<front>')}}" class="logo m-0 text-uppercase">BLOGGY</a>
                 </div>
                 <div class="col-md-3 order-3 order-md-1">
                     <form action="#" class="search-form">
@@ -54,14 +58,14 @@
                 </div>
             </div>
             <ul class="js-clone-nav d-none d-lg-inline-none text-start site-menu float-end">
-                <li class="active"><a href="index-2.html">Home</a></li>
-                <li class="has-children">
-                    <a href="categories.html">Categories</a>
-                    <ul class="dropdown">
-                        {{ categoryMacro.menu_links(items, attributes, 0, classes ?: ['menu', 'menu--' ~ menu_name|clean_class, 'nav'], dropdown_classes ?: ['dropdown-menu']) }}
+                    <ul class="dropdown d-inline">
+                        {{ categoryMacro.menu_links(items, attributes, 0, classes ?: ['menu', 'menu--' ~ menu_name|clean_class, 'nav'], dropdown_classes ?: ['dropdown-menu'],'') }}
                     </ul>
-                </li>
             </ul>
         </div>
     </div>
 </nav>
+
+{# {% for item in items %}
+{{ dump(item )}} 
+{% endfor %} #}

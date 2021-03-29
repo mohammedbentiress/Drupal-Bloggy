@@ -1,0 +1,30 @@
+<div class="section pt-5 pb-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="post-entry d-md-flex small-horizontal mb-5">
+                    <div class="me-md-5 thumbnail mb-3 mb-md-0">
+                        <img src="{{ file_url(content.field_image['#items'].entity.uri.value ?? 'https://picsum.photos/250/160') }}" alt="Image" class="img-fluid">
+                    </div>
+                    <div class="content">
+                        <div class="post-meta mb-3">
+                            <a href="{{ path('entity.taxonomy_term.canonical', {'taxonomy_term': node.field_tax_article.entity.id ?? '#'}) }}" class="category">{{ node.field_category.entity.name.value ?? '.' }}</a> &mdash;
+                            <span class="date">{{ node.field_created_at.value | date("M d, Y") }}</span>
+                        </div>
+                        <h2 class="heading"><a href="{{ path('entity.node.canonical', {'node': node.title.entity.id}) }}">{{ node.label }}</a></h2>
+                        <p>{{ node.field_introduction.value|raw }}</p>
+                        <a href="#" class="post-author d-flex align-items-center">
+                            <div class="author-pic">
+                                <img src="https://i.pravatar.cc/45" alt="Image">
+                            </div>
+                            <div class="text">
+                                <strong>{{ node.owner.field_firstname.0.value ?? 'Anonymous' ~' '~ node.owner.field_lastname.0.value}}</strong>
+                                <span>{{ node.owner.field_description.0.value }}</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

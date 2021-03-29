@@ -27,12 +27,11 @@
                                     <p>{{item._entity.field_introduction.value|raw}}</p>
                                     <a href="#" class="post-author d-flex align-items-center">
                                         <div class="author-pic">
-                                            <img src="https://i.pravatar.cc/45" alt="Image">
+                                            <img src="{{ file_url(item._entity.owner.user_picture.entity.uri.value) }}" alt="Image">
                                         </div>
                                         <div class="text">
-                                            {{dump(item._entity)}}
-                                            <strong>{{item._entity.field_author.entity.field_first_name.value }}{{ item._entity.field_author.entity.field_lastname.value}}</strong>
-                                            <span>CEO and Founder</span>
+                                            <strong>{{item._entity.owner.field_firstname.0.value ~' '~ item._entity.owner.field_lastname.0.value}}</strong>
+                                            <span>{{ item._entity.owner.field_description.0.value }}</span>
                                         </div>
                                     </a>
                                 </div>

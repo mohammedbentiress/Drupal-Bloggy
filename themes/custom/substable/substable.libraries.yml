@@ -2,12 +2,15 @@ global-styling:
   version: 1.x
   css:
     theme:
-      css/fonts/icomoon/style.css: {}
-      css/fonts/flaticon/font/flaticon.css: {}
+      fonts/icomoon/style.css: {}
+      fonts/flaticon/font/flaticon.css: {}
       css/tiny-slider.css: {}
       css/glightbox.min.css: {}
       css/aos.css: {}
       css/style.css: {}
+      css/navbar.css: {}
+      'https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&amp;display=swap': {type: external}
+      'https://fonts.gstatic.com/': {type: external}
 
 global-scripts:
   version: 1.x
