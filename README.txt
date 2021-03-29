@@ -2,6 +2,7 @@
 CONTENTS OF THIS FILE
 ---------------------
 
+ * Configuration file path
  * About Drupal
  * Configuration and features
  * Installation profiles
@@ -9,6 +10,10 @@ CONTENTS OF THIS FILE
  * Developing for Drupal
  * More information
 
+Configuration file path
+-----------------------
+
+config/sync
 
 ABOUT DRUPAL
 ------------
